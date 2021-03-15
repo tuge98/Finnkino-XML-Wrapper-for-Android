@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
         String xx = dataList.returnwantedObject(x);
         System.out.println(xx);
-
+        list.clear();
 
         try {
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -154,7 +154,9 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        ArrayAdapter arrayAdapter2 = new ArrayAdapter(this, android.R.layout.simple_list_item_1,list);
+        ArrayAdapter<String> itemsAdapter =
+                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
+        listView.setAdapter(itemsAdapter);
     }
 
 
