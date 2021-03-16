@@ -23,6 +23,11 @@ public class DataList {
 
     public ArrayList converttoString(){
         ArrayList<String> listofStrings = new ArrayList<String>();
+
+
+
+
+
         for (int i = 0; i < DataArray.size(); i++) {
             listofStrings.add(DataArray.get(i).getArea());
 
